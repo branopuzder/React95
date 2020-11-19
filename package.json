@@ -35,7 +35,10 @@
     "semantic-release": "semantic-release",
     "cz": "git-cz",
     "docs:dev": "docz dev",
-    "docs:build": "docz build"
+    "docs:build": "docz build",
+    "cypress:open": "cypress open",
+    "cypress:run": "cypress run",
+    "cypress:docs:test": "start-test dev http-get://localhost:3000 cy:run"
   },
   "peerDependencies": {
     "react": "^16.8.2",
@@ -60,6 +63,7 @@
     "babel-plugin-styled-components": "^1.10.7",
     "commitizen": "^4.0.4",
     "cross-env": "^6.0.3",
+    "cypress": "^5.6.0",
     "cz-conventional-changelog": "^3.1.0",
     "docz": "latest",
     "eslint": "^5.16.0",
