@@ -50,4 +50,24 @@ describe('<Fieldset />', () => {
       );
     });
   });
+
+  describe('prop: variant', () => {
+    it('renders Fieldset with flat theme', () => {
+      const { container } = renderWithTheme(<Fieldset variant='flat' />);
+      const fieldset = container.firstChild;
+
+      expect(fieldset).toHaveStyleRule('border', `2px solid ${theme.flatDark}`);
+    });
+
+    it('renders Label with flat theme', () => {
+      const labelText = 'Name:';
+      const { container } = renderWithTheme(
+        <Fieldset label={labelText} variant='flat' />
+      );
+      const fieldset = container.firstChild;
+      const legend = fieldset.querySelector('legend');
+
+      expect(legend).toHaveStyleRule('background', `${theme.canvas}`);
+    });
+  });
 });
